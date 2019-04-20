@@ -1,0 +1,43 @@
+<!--Group 25
+Vesion 1.0
+Final Project-cOMP308
+Candy Funhouse-->
+
+    <!-- Header Area Starts -->
+    <header class="header-area" style ='background-color: #FFC0CB' >
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-2">
+                  <div class="logo-area">
+                      <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo" width="80" height="80"></a>
+                  </div>
+              </div>
+              <div class="col-lg-10">
+                  <div class="custom-navbar">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                  </div>
+                  <div class="main-menu">
+                      <ul>
+                          <li><a class="nav-link" routerLink="home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                            ><i class="fas fa-candy-cane fa-lg"></i> Home </a></li>
+                          <li> <a class="nav-link" routerLink="about"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                            ><i class="fa fa-lg fa-info"></i> About</a></li>
+                          <li><a class="nav-link" routerLink="productlist"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                            ><i class="fas fa-shopping-cart fa-lg"></i> Products</a></li>
+                            <li *ngIf="isLoggedIn()" class="navbar-text text-success ml-5 mr-5 d-none d-lg-inline"><i class="fas fa-lg fa-user"></i>
+                              Welcome, {{ user.displayName }}</li>
+
+                            <li *ngIf="isLoggedIn()" class="nav-item"><a (click)="onLogoutClick()" routerLink="logout" class="nav-link">
+                              <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+
+                            <li *ngIf="!isLoggedIn()" class="nav-item"><a routerLink="login" class="nav-link">
+                              <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- Header Area End -->
